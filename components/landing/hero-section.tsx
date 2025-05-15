@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { Badge } from "../ui/badge";
 
 export function HeroSection() {
   const scrollToEarlyAccess = () => {
@@ -77,13 +78,27 @@ export function HeroSection() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
+          <motion.div
+            className="mb-6 flex justify-center"
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
+          >
+            <Badge
+              variant="outline"
+              className="text-base px-4 py-1 border-secondary-amber"
+            >
+              Telegram First · Built for Thinkers
+            </Badge>
+          </motion.div>
           <motion.h1
             className="mb-4 text-4xl font-bold leading-tight tracking-tight md:text-6xl md:leading-tight"
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.1 }}
           >
-            Your Telegram thoughts, organized by GPT — synced to your second brain.
+            Your Telegram thoughts, organized by GPT — synced to your second
+            brain.
           </motion.h1>
 
           <motion.p
@@ -92,7 +107,8 @@ export function HeroSection() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Turn your voice notes, ideas, and chats into Notion pages — automatically.
+            Turn your voice notes, ideas, and chats into Notion pages —
+            automatically.
           </motion.p>
 
           <motion.div
@@ -100,9 +116,9 @@ export function HeroSection() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <Button 
-              variant="gradient" 
-              size="xl" 
+            <Button
+              variant="gradient"
+              size="xl"
               onClick={scrollToEarlyAccess}
               className="rounded-2xl shadow-lg"
             >
