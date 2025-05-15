@@ -20,7 +20,7 @@ export function EmailCTASection() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError("");
-    
+
     // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
@@ -29,7 +29,7 @@ export function EmailCTASection() {
     }
 
     setIsSubmitting(true);
-    
+
     // Simulate API call
     setTimeout(() => {
       setIsSubmitting(false);
@@ -52,7 +52,9 @@ export function EmailCTASection() {
         <motion.div
           className="mx-auto max-w-xl rounded-2xl bg-white p-8 shadow-xl dark:bg-black"
           initial={{ opacity: 0, y: 30 }}
-          animate={isIntersecting ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          animate={
+            isIntersecting ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
+          }
           transition={{ duration: 0.8 }}
         >
           <motion.div
@@ -62,7 +64,7 @@ export function EmailCTASection() {
             className="mb-6 text-center"
           >
             <h2 className="mb-2 text-3xl font-bold leading-tight tracking-tight md:text-4xl">
-              Be the first to try it. 
+              Be the first to try it.
             </h2>
             <p className="text-lg text-muted-foreground">
               Get early access to LinkMind before everyone else.
@@ -82,7 +84,7 @@ export function EmailCTASection() {
                 placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className={`${error ? 'border-destructive' : ''} text-lg`}
+                className={`${error ? "border-destructive" : ""} text-lg`}
                 disabled={isSubmitting || isSuccess}
               />
               {error && (
@@ -105,7 +107,7 @@ export function EmailCTASection() {
               ) : isSuccess ? (
                 <>
                   <Check className="mr-2 h-4 w-4" />
-                  You're on the list!
+                  You&#10075;re on the list!
                 </>
               ) : (
                 "Get Early Access"

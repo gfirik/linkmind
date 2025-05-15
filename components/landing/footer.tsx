@@ -1,30 +1,39 @@
-"use client";
-
 import { Zap } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-muted py-12">
-      <div className="container mx-auto px-4">
-        <div className="mb-8 flex items-center justify-center">
-          <Zap className="mr-2 h-6 w-6 text-primary-blue" />
-          <span className="text-xl font-bold">LinkMind</span>
-        </div>
+    <footer className="bg-background border-t">
+      <div className="container mx-auto px-4 py-10">
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="flex items-center mb-6 md:mb-0">
+            <Zap className="h-6 w-6 text-primary mr-2" />
+            <span className="font-sora font-bold text-xl">LinkMind</span>
+          </div>
 
-        <div className="mb-8 flex flex-col items-center justify-center space-y-4 md:flex-row md:space-y-0 md:space-x-8">
-          <a href="#" className="text-muted-foreground hover:text-foreground">
-            Privacy Policy
-          </a>
-          <a href="#" className="text-muted-foreground hover:text-foreground">
-            Terms of Service
-          </a>
-          <a href="#" className="text-muted-foreground hover:text-foreground">
-            Contact Us
-          </a>
-        </div>
+          <div className="flex flex-wrap justify-center space-x-6">
+            <a
+              href="#"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Privacy Policy
+            </a>
+            <a
+              href="#"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Terms of Service
+            </a>
+            <a
+              href="#"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Contact Us
+            </a>
+          </div>
 
-        <div className="text-center text-sm text-muted-foreground">
-          &copy; {new Date().getFullYear()} LinkMind. All rights reserved.
+          <div className="mt-6 md:mt-0 text-sm text-muted-foreground">
+            © {new Date().getFullYear()} LinkMind. All rights reserved.
+          </div>
         </div>
       </div>
     </footer>
